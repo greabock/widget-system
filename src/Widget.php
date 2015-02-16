@@ -1,7 +1,5 @@
 <?php namespace Greabock\Widget;
 
-use Illuminate\Contracts\Support\Renderable;
-
 class Widget {
 
     /**
@@ -60,11 +58,11 @@ class Widget {
     }
 
     /**
-     * @param Renderable $widget
+     * @param $widget
      * @param string     $name
      * @return void
      */
-    public function addInstance(Renderable $widget, $name)
+    public function addInstance($widget, $name)
     {
         $this->instances[$name] = $widget;
     }
