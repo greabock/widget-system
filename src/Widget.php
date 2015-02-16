@@ -81,11 +81,10 @@ class Widget {
     
     public function position($position)
     {
-
+    	if ( ! array_key_exists($position, $this->positions)) return null;
 
     	usort($this->positions[$position] , function($a, $b)
     	{
-
     		return ($a['order'] == $b['order']) ? 0 :(( $a['order'] > $b['order']) ? -1 : 1);
 
     	});
