@@ -18,7 +18,7 @@ Example Widget
 ```php
 <?php namespace App\Widgets;
 
-class MyCustomWidget implements { 
+class MyCustomWidget { 
 
 	protected $something;
 
