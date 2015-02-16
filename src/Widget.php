@@ -105,7 +105,7 @@ class Widget {
     	if (array_key_exists($name, $this->classes)) return true;
 
     	return false;
-    };
+    }
 
 
     public function isEmptyPosition($position)
@@ -129,3 +129,4 @@ class Widget {
 
 
 }
+
