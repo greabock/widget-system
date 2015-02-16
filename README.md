@@ -45,14 +45,24 @@ class MyCustomWidget {
 Registration:
 ```php
 Widget::register('App\Widgets\MyCustomWidget', 'myWidget' );
-//or
-Widget::addInstance(new App\Widgets\MyCustomWidget($params), 'myWidget' );
 ```
 
-In template:
+Template:
 ```tpl
 {!! Widget::show('myWidget', 'param') !!}
 {-- or --}
 {!! Widget::myWidget('param') !!}
+```
+
+Positions
+```
+Widget::register('App\Widgets\MyCustomWidget', 'myWidget', 'menu_position', 1 );
+Widget::register('App\Widgets\OtherCustomWidget', 'myWidget', 'menu_position', 2 );
+```
+
+Template:
+
+```
+{!! Widget::position('menu_position') !!}
 ```
 
