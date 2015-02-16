@@ -1,6 +1,18 @@
 #DA EPIC WIDGET-SYSTEM
 laravel widget-system
 
+composer
+
+```
+"greabock/widget-system": "0.01.*@dev"
+```
+
+
+facade
+```
+'Widget'=> 'Greabock\Widget\Facade'
+```
+
 
 Example Widget (must implements Renderable)
 ```php
