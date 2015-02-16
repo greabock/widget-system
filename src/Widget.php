@@ -1,6 +1,6 @@
 <?php namespace Greabock\Widget;
 
-use App;
+use Illuminate\Foundation\Application as App;
 
 class Widget {
 
