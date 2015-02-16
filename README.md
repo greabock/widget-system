@@ -62,7 +62,7 @@ Widget::register('App\Widgets\OtherCustomWidget', 'myWidget', 'menu_position', 2
 
 Template:
 
-```
+```php
 {!! Widget::position('menu_position') !!}
 ```
 
