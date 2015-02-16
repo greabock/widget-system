@@ -42,7 +42,7 @@ Widget::addInstance(new App\Widgets\MyCustomWidget($params), 'myWidget' );
 In template:
 ```tpl
 {!! Widget::show('myWidget', 'param') !!}
-//or
+{-- or --}
 {!! Widget::myWidget('param') !!}
 ```
 
