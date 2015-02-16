@@ -14,7 +14,7 @@ facade
 ```
 
 
-Example Widget (must implements Renderable)
+Example Widget
 ```php
 <?php namespace App\Widgets;
 
