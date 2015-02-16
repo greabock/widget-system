@@ -40,7 +40,7 @@ Widget::addInstance(new App\Widgets\MyCustomWidget($params), 'myWidget' );
 ```
 
 In template:
-```mustache
+```tpl
 {!! Widget::show('myWidget', 'someElse') !!}
 
 {!! Widget::myWidget('someElse') !!}
