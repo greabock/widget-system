@@ -96,10 +96,26 @@ class Widget {
     			$carpet .= $this->show($widget['name']);
     	}
 
-
     	return $carpet;
     }
 
+
+    public function exists($name)
+    {
+    	if (array_key_exists($name, $this->classes)) return true;
+
+    	return false;
+    };
+
+
+    public function isEmptyPosition($position)
+    {
+		if ( ! array_key_exists($position, $this->positions)) return true;
+		
+		if ( ! count($this->positions[$position]) ) return true;
+
+		return false;
+    }
 
     /**
      * @param $widget
@@ -110,7 +126,6 @@ class Widget {
     {
         $this->instances[$name] = $widget;
     }
-
 
 
 }
