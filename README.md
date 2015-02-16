@@ -18,11 +18,11 @@ class MyCustomWidget implements Renderable {
 	}
 	
 	
-	public function render($someElse)
+	public function render($param)
 	{
 		$data = [
 			'something' => $this->something,
-			'someElse'  => $someElse,
+			'someElse'  => $param,
 		];
 		
 		return view('view', $data);
@@ -41,8 +41,8 @@ Widget::addInstance(new App\Widgets\MyCustomWidget($params), 'myWidget' );
 
 In template:
 ```tpl
-{!! Widget::show('myWidget', 'someElse') !!}
+{!! Widget::show('myWidget', 'param') !!}
 
-{!! Widget::myWidget('someElse') !!}
+{!! Widget::myWidget('param') !!}
 ```
 
