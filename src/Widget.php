@@ -1,5 +1,7 @@
 <?php namespace Greabock\Widget;
 
+use App;
+
 class Widget {
 
     /**
@@ -15,6 +17,12 @@ class Widget {
      * @var array
      */
     protected $instances = [];
+
+
+    public function __construct(App $app)
+    {
+    	$this->app = $app;
+    }
 
     /**
      * @param string $method
@@ -49,7 +57,7 @@ class Widget {
 
         if ( ! array_key_exists($name, $this->instances))
         {
-            $widget = app($this->classes[$name]);
+            $widget = $this->app->make($this->classes[$name]);
 
             $this->addInstance($widget, $name);
         }
