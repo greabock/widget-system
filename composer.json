@@ -18,10 +18,5 @@
             "Greabock\\Widget\\": "src/"
         },
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.01-dev"
-        }
-    },
     "minimum-stability": "dev"
 }
