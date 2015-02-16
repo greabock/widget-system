@@ -55,7 +55,7 @@ Template:
 ```
 
 Positions
-```
+```php
 Widget::register('App\Widgets\MyCustomWidget', 'myWidget', 'menu_position', 1 );
 Widget::register('App\Widgets\OtherCustomWidget', 'myWidget', 'menu_position', 2 );
 ```
