@@ -64,5 +64,8 @@ Template:
 
 ```php
 {!! Widget::position('menu_position') !!}
+// same as
+{!! Widget::show('myWidget') !!}
+{!! Widget::show('OtherWidget') !!}
 ```
 
