@@ -1,0 +1,27 @@
+{
+    "name": "barryvdh/laravel-debugbar",
+    "description": "Da epic widget-system for Laravel",
+    "keywords": ["laravel", "widget"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Greabock",
+            "email": "greabock@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.0.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Greabock\\Widget\\": "src/"
+        },
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.01-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
