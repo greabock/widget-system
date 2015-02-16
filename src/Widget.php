@@ -18,6 +18,13 @@ class Widget {
      */
     protected $instances = [];
 
+    /**
+     * Positions for widgets
+     *
+     * @var array
+     */
+    protected $positions = [];
+
 
     public function __construct(App $app)
     {
@@ -41,9 +48,15 @@ class Widget {
      * @param  string $name
      * @return void
      */
-    public function register($class, $name)
+    public function register($class, $name, $position = null, $order = null)
     {
         $this->classes[$name] = $class;
+
+        if($position)
+        {
+        	$this->positions[$position][] = compact('name', 'order');
+        }
+
     }
 
     /**
@@ -65,14 +78,40 @@ class Widget {
         return call_user_func_array([$this->instances[$name], 'render'], array_slice(func_get_args(), 1));
     }
 
+    
+    public function position($position)
+    {
+
+
+    	usort($this->positions[$position] , function($a, $b)
+    	{
+
+    		return ($a['order'] == $b['order']) ? 0 :(( $a['order'] > $b['order']) ? -1 : 1);
+
+    	});
+
+    	$carpet = '';
+
+    	foreach ($this->positions[$position] as $widget) 
+    	{
+    			$carpet .= $this->show($widget['name']);
+    	}
+
+
+    	return $carpet;
+    }
+
+
     /**
      * @param $widget
      * @param string     $name
      * @return void
      */
-    public function addInstance($widget, $name)
+    protected function addInstance($widget, $name)
     {
         $this->instances[$name] = $widget;
     }
+
+
 
 }
