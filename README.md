@@ -18,8 +18,6 @@ Example Widget
 ```php
 <?php namespace App\Widgets;
 
-use Illuminate\Contracts\Support\Renderable;
-
 class MyCustomWidget implements Renderable { 
 
 	protected $something;
