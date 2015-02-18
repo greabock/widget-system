@@ -4,7 +4,7 @@ laravel widget-system
 composer
 
 ```
-"greabock/widget-system": "0.01.*@dev"
+"greabock/widget-system": "dev-master"
 ```
 
 
