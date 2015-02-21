@@ -91,9 +91,11 @@ class Widget {
 
     	$carpet = '';
 
+	$arguments = array_slice(func_get_args(), 1);
+	
     	foreach ($this->positions[$position] as $widget) 
     	{
-    			$carpet .= $this->show($widget['name']);
+    		$carpet .= call_user_func_array([$this, 'show'], array_unshift($arguments, $widget['name']));
     	}
 
     	return $carpet;
